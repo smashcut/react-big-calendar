@@ -49,7 +49,7 @@ class TimeGridHeader extends React.Component {
             <button
               type="button"
               className="rbc-button-link"
-              onClick={e => this.handleHeaderClick(date, drilldownView, e)}
+              onClick={(e) => this.handleHeaderClick(date, drilldownView, e)}
             >
               {header}
             </button>
@@ -113,6 +113,7 @@ class TimeGridHeader extends React.Component {
       range,
       events,
       getNow,
+      date: current,
       accessors,
       selectable,
       components,
@@ -126,6 +127,9 @@ class TimeGridHeader extends React.Component {
       },
       resizable,
     } = this.props
+
+    console.error('kurr', current)
+    console.error('pops', this.props)
 
     let style = {}
     if (isOverflowing) {
@@ -141,7 +145,7 @@ class TimeGridHeader extends React.Component {
         className={clsx('rbc-time-header', isOverflowing && 'rbc-overflowing')}
       >
         <div
-          className="rbc-label rbc-time-header-gutter"
+          className="rbc-label rbc-time-header-gutter kutyafasza"
           style={{ width, minWidth: width, maxWidth: width }}
         >
           {TimeGutterHeader && <TimeGutterHeader />}
@@ -156,6 +160,7 @@ class TimeGridHeader extends React.Component {
                     index={idx}
                     label={accessors.resourceTitle(resource)}
                     resource={resource}
+                    date={current}
                   />
                 </div>
               </div>
