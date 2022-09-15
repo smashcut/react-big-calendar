@@ -128,9 +128,6 @@ class TimeGridHeader extends React.Component {
       resizable,
     } = this.props
 
-    console.error('kurr', current)
-    console.error('pops', this.props)
-
     let style = {}
     if (isOverflowing) {
       style[rtl ? 'marginLeft' : 'marginRight'] = `${scrollbarSize()}px`
@@ -145,7 +142,7 @@ class TimeGridHeader extends React.Component {
         className={clsx('rbc-time-header', isOverflowing && 'rbc-overflowing')}
       >
         <div
-          className="rbc-label rbc-time-header-gutter kutyafasza"
+          className="rbc-label rbc-time-header-gutter"
           style={{ width, minWidth: width, maxWidth: width }}
         >
           {TimeGutterHeader && <TimeGutterHeader />}
