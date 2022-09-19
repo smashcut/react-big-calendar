@@ -113,7 +113,6 @@ class TimeGridHeader extends React.Component {
       range,
       events,
       getNow,
-      date: current,
       accessors,
       selectable,
       components,
@@ -157,7 +156,7 @@ class TimeGridHeader extends React.Component {
                     index={idx}
                     label={accessors.resourceTitle(resource)}
                     resource={resource}
-                    date={current}
+                    range={range}
                   />
                 </div>
               </div>
