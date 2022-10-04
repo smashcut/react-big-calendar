@@ -6127,6 +6127,8 @@ var Calendar = /*#__PURE__*/ (function (_React$Component) {
       {
         key: 'render',
         value: function render() {
+          var _this2 = this
+
           var _this$props4 = this.props,
             view = _this$props4.view,
             toolbar = _this$props4.toolbar,
@@ -6178,6 +6180,9 @@ var Calendar = /*#__PURE__*/ (function (_React$Component) {
                 label: label,
                 onView: this.handleViewChange,
                 onNavigate: this.handleNavigate,
+                onCustomEvent: function onCustomEvent(event) {
+                  return _this2.props.onCustomEvent(event)
+                },
                 localizer: localizer,
               }),
             /*#__PURE__*/ React.createElement(

@@ -1026,6 +1026,7 @@ class Calendar extends React.Component {
             label={label}
             onView={this.handleViewChange}
             onNavigate={this.handleNavigate}
+            onCustomEvent={(event) => this.props.onCustomEvent(event)}
             localizer={localizer}
           />
         )}
