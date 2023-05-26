@@ -1881,6 +1881,15 @@ var EventRow = /*#__PURE__*/ (function (_React$Component) {
   return EventRow
 })(React.Component)
 
+EventRow.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? _objectSpread(
+        {
+          segments: PropTypes.array,
+        },
+        EventRowMixin.propTypes
+      )
+    : {}
 EventRow.defaultProps = _objectSpread({}, EventRowMixin.defaultProps)
 
 function endOfRange(_ref) {
@@ -2512,6 +2521,13 @@ var Header = function Header(_ref) {
   )
 }
 
+Header.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? {
+        label: PropTypes.node,
+      }
+    : {}
+
 var DateHeader = function DateHeader(_ref) {
   var label = _ref.label,
     drilldownView = _ref.drilldownView,
@@ -2532,6 +2548,17 @@ var DateHeader = function DateHeader(_ref) {
     label
   )
 }
+
+DateHeader.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? {
+        label: PropTypes.node,
+        date: PropTypes.instanceOf(Date),
+        drilldownView: PropTypes.string,
+        onDrillDown: PropTypes.func,
+        isOffRange: PropTypes.bool,
+      }
+    : {}
 
 var _excluded$6 = ['date', 'className']
 
@@ -3593,6 +3620,16 @@ var TimeSlotGroup = /*#__PURE__*/ (function (_Component) {
 
   return TimeSlotGroup
 })(Component)
+TimeSlotGroup.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? {
+        renderSlot: PropTypes.func,
+        group: PropTypes.array.isRequired,
+        resource: PropTypes.any,
+        components: PropTypes.object,
+        getters: PropTypes.object,
+      }
+    : {}
 
 function stringifyPercent(v) {
   return typeof v === 'string' ? v : v + '%'
@@ -4443,6 +4480,15 @@ var ResourceHeader = function ResourceHeader(_ref) {
   var label = _ref.label
   return /*#__PURE__*/ React.createElement(React.Fragment, null, label)
 }
+
+ResourceHeader.propTypes =
+  process.env.NODE_ENV !== 'production'
+    ? {
+        label: PropTypes.node,
+        index: PropTypes.number,
+        resource: PropTypes.object,
+      }
+    : {}
 
 var TimeGridHeader = /*#__PURE__*/ (function (_React$Component) {
   _inherits(TimeGridHeader, _React$Component)

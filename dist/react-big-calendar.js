@@ -50826,6 +50826,16 @@
 
     return TimeSlotGroup
   })(react.exports.Component)
+  TimeSlotGroup.propTypes =
+    'development' !== 'production'
+      ? {
+          renderSlot: propTypes$3.exports.func,
+          group: propTypes$3.exports.array.isRequired,
+          resource: propTypes$3.exports.any,
+          components: propTypes$3.exports.object,
+          getters: propTypes$3.exports.object,
+        }
+      : {}
 
   function stringifyPercent(v) {
     return typeof v === 'string' ? v : v + '%'
@@ -51699,6 +51709,15 @@
     var label = _ref.label
     return /*#__PURE__*/ React.createElement(React.Fragment, null, label)
   }
+
+  ResourceHeader.propTypes =
+    'development' !== 'production'
+      ? {
+          label: propTypes$3.exports.node,
+          index: propTypes$3.exports.number,
+          resource: propTypes$3.exports.object,
+        }
+      : {}
 
   var TimeGridHeader = /*#__PURE__*/ (function (_React$Component) {
     _inherits(TimeGridHeader, _React$Component)
