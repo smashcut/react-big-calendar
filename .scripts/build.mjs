@@ -5,10 +5,10 @@ const {
   b = isCI, // pass `-b` to build if you want it to run browserslist update outside of CI environment
 } = argv;
 
-if (b) {
-  // Update browserslist
-  await $`npx browserslist@latest --update-db`;
-}
+// if (b) {
+//   // Update browserslist
+//   await $`npx browserslist@latest --update-db`;
+// }
 
 console.log(chalk.blue('[BEGIN BUILD]'))
 console.log(chalk.blue('Building js'))
